@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,13 +34,13 @@
 <div class="countdown">
   <h1>Work Countdown</h1>
   <div class="timer">
-    <span id="months"></span> Months
+    <span id="meses"></span> Meses
   </div>
   <div class="timer">
-    <span id="weeks"></span> Weeks
+    <span id="semanas"></span> Semanas
   </div>
   <div class="timer">
-    <span id="days"></span> Days
+    <span id="dias"></span> Días
   </div>
 </div>
 
@@ -52,13 +52,13 @@
     var now = new Date();
     var timeLeft = endDate - now;
     
-    var months = Math.floor(timeLeft / (1000 * 60 * 60 * 24 * 30));
-    var weeks = Math.floor((timeLeft % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24 * 7));
-    var days = Math.floor((timeLeft % (1000 * 60 * 60 * 24 * 7)) / (1000 * 60 * 60 * 24));
+    var meses = Math.floor(timeLeft / (1000 * 60 * 60 * 24 * 30));
+    var semanas = Math.floor((timeLeft % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24 * 7));
+    var dias = Math.floor((timeLeft % (1000 * 60 * 60 * 24 * 7)) / (1000 * 60 * 60 * 24));
     
-    document.getElementById('months').innerHTML = months;
-    document.getElementById('weeks').innerHTML = weeks;
-    document.getElementById('days').innerHTML = days;
+    document.getElementById('meses').innerHTML = meses;
+    document.getElementById('semanas').innerHTML = semanas;
+    document.getElementById('dias').innerHTML = días;
   }
   
   setInterval(updateCountdown, 1000);
